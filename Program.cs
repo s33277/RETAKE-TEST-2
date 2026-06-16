@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Test2Retake.Data;
+using Test2Retake.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +11,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// builder.Services.AddScoped<IPatientService, PatientService>();
+builder.Services.AddScoped<ICarService, CarService>();
+builder.Services.AddScoped<IRentalService, RentalService>();
+
 
 var app = builder.Build();
 
