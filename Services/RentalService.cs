@@ -35,7 +35,7 @@ public class RentalService : IRentalService
         try
         {
             rental.Status = "Returned";
-            rental.ReturnDate = DateTime.Now;
+            rental.ReturnDate = request.ReturnDate;
             await _dbContext.SaveChangesAsync();
             await transaction.CommitAsync();
             return ReturnRentalResult.Success;
