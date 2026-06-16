@@ -39,7 +39,7 @@ public class RentalsController : ControllerBase
                 Conflict(new { Message = $"Rental with ID {id} was already returned." }),
             
             ReturnRentalResult.InvalidRentalDate => 
-                BadRequest(new { Message = "The provided date of rental is invalid." }),
+                BadRequest(new { Message = "The provided date of return is earlier than date of rental." }),
             
             _ => 
                 StatusCode(500, new { Message = "An internal error occurred." })
