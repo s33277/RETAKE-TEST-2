@@ -25,7 +25,6 @@
       <Folder Include="Controllers\" />
       <Folder Include="DTOs\Requests\" />
       <Folder Include="DTOs\Responses\" />
-      <Folder Include="Entities\" />
       <Folder Include="Services\Results\" />
     </ItemGroup>
 
